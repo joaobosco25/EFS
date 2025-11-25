@@ -1,0 +1,969 @@
+/* ============================================
+   EFASEG Website - CSS Principal
+   Cores: Preto (#000000), Branco (#FFFFFF), Dourado (#D4AF37)
+   Fonte: Poppins
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* ============================================
+   LAYOUT E CONTAINER
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+  background-color: #222223;
+  color: #ffffff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #D4AF37;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #D4AF37;
+}
+
+nav a.active {
+  color: #D4AF37;
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background-color: #222223;
+  color: #ffffff;
+  padding: 40px 0 20px;
+  margin-top: 60px;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+footer .footer-section {
+  text-align: center;
+}
+
+footer .footer-section img {
+  height: 90px;
+  width: 90px;
+  margin-bottom: 20px;
+}
+
+footer .footer-section h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 10px;
+}
+
+
+footer .footer-section p {
+  color: #999;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+/* footersection2*/
+
+.footer .footer-section2 a {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  display: block;        /* um embaixo do outro, igual aos <p> */
+  margin-bottom: 4px;
+}
+
+
+footer .footer-section2 {
+  text-align: center;
+}
+
+footer .footer-section2 p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+footer .footer-section2 h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 10px;
+}
+
+footer .footer-section2 img {
+  height: 90px;
+  width: 90px;
+  margin-bottom: 20px;
+}
+
+footer .footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+footer .footer-section a {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  display: block;        /* um embaixo do outro, igual aos <p> */
+  margin-bottom: 4px;
+}
+
+footer .footer-section a:hover {
+  color: #D4AF37;        /* destaca no hover com a cor do título */
+}
+
+/* De quebra, deixar o ícone com um tamanho melhor */
+footer .footer-section h3 ion-icon {
+  font-size: 40px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* garante altura de destaque */
+  color: white;
+  display: flex;
+  align-items: center;
+  transition: background 1s ease-in-out;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero .container {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+    text-align: center;
+
+}
+
+.hero .subtitle {
+  font-size: 20px;
+  color: #D4AF37;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.hero .buttons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+  background-color: #D4AF37;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: #c9a227;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+}
+
+.btn-secondary:hover {
+  background-color: #D4AF37;
+  color: #000000;
+}
+
+.btn-dark {
+  background-color: #000000;
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+}
+
+.btn-dark:hover {
+  background-color: #1a1a1a;
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+
+.stats {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #D4AF37;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* ============================================
+   COURSES SECTION
+   ============================================ */
+
+.courses {
+  padding: 60px 0;
+  justify-content: center;
+}
+
+.courses h2 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000000;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.course-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+.course-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.course-card a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.course-card a:hover {
+  text-decoration: underline;
+}
+
+.courses-center {
+  text-align: center;
+}
+
+/* ============================================
+   RECICLAGENS
+   ============================================ */
+
+.reciclagens {
+  padding: 60px 0;
+  justify-content: center;
+  border: 2px solid #e0e0e0;
+  background-color: #f5f5f5;
+
+}
+
+.reciclagens h2 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000000;
+}
+
+.courses-grid1 .course-card {
+  display: grid;
+  border: 3px solid red;
+  margin-bottom: 40px;
+}
+
+ .course-card2 {
+  display: grid;
+  border: 3px solid red;
+  margin-bottom: 40px;
+  border: 2px solid #e0e0e0;
+  background-color: #f5f5f5;
+  gap: 20px;
+}
+
+.course-card2 {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.course-card2:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+.course-card2 h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.course-card2 p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.course-card2 a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.course-card2 a:hover {
+  text-decoration: underline;
+}
+
+
+.courses-grid1 .course-card {  background-color: #f5f5f5;
+}
+
+
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.why-choose {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.why-choose h2 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.why-item {
+  padding: 20px;
+}
+
+.why-item .icon {
+  font-size: 36px;
+  color: #D4AF37;
+  margin-bottom: 15px;
+}
+
+.why-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.why-item p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ============================================
+   FEATURED SECTIONS
+   ============================================ */
+
+.featured {
+  padding: 60px 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.featured-card {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.featured-card:hover {
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.featured-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.featured-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.featured-card span {
+  color: #D4AF37;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.cta {
+  background-color: #D4AF37;
+  color: #000000;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* ============================================
+   FORM SECTION
+   ============================================ */
+
+.form-section {
+  padding: 60px 0;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #D4AF37;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-info {
+  background-color: rgba(212, 175, 55, 0.1);
+  border: 2px solid #D4AF37;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.form-info p {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+
+.content-section {
+  padding: 60px 0;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.content-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 30px 0 15px;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.content-section ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content-section li {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  nav {
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reciclagens-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    padding: 25px;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero .subtitle {
+    font-size: 16px;
+  }
+
+  .stat-item h3 {
+    font-size: 36px;
+  }
+
+  .courses h2 {
+    font-size: 28px;
+  }
+
+  .reciclagens h2 {
+    font-size: 28px;
+  }
+
+  .why-choose h2 {
+    font-size: 28px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta p {
+    font-size: 16px;
+  }
+}
+/* === MENU HAMBÚRGUER (SOMENTE MOBILE) === */
+@media (max-width: 768px) {
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+  }
+  .hamburger {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  header nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav a {
+    color: #fff;
+    padding: 0.8rem;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Ícone do menu */
+  .hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  /* === MENU HAMBÚRGUER (APENAS MOBILE) === */
+@media (max-width: 768px) {
+
+  /* Ajustes do header */
+  header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  /* Esconde o menu padrão */
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #d4af37;
+  }
+
+  /* Exibe o menu quando ativo */
+  header nav.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Links do menu */
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Botão hambúrguer */
+  .hamburger {
+    width: 28px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    border: 2px solid red;
+    
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #d4af37;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animação quando ativo */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Animação do menu aparecendo */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+}

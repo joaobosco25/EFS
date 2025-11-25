@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastro de Vigilantes - Inscreva-se para Formação ou Reciclagem na EFASEG.">
+  <title>Cadastro - EFASEG</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.png" alt="EFASEG Logo">
+        <span>EFASEG</span>
+      </a>
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="about.html">Sobre</a>
+        <a href="courses.html">Cursos</a>
+        <a href="profession.html">Profissão</a>
+        <a href="portaria16.html">Portaria 16</a>
+        <a href="register.html" class="active">Cadastro</a>
+        <a href="contact.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <h1>Cadastro de Vigilantes</h1>
+          <p class="subtitle">Inscreva-se para Formação ou Reciclagem</p>
+          <p>Preencha o formulário abaixo e dê o primeiro passo para sua carreira na segurança privada. Após o envio, você será redirecionado para o WhatsApp para confirmar sua inscrição.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+      <div class="container">
+        <div class="form-container">
+          <form id="registerForm">
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Nome Completo *</label>
+              <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <!-- CPF Field -->
+            <div class="form-group">
+              <label for="cpf">CPF *</label>
+              <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+            </div>
+
+            <!-- RG Field -->
+            <div class="form-group">
+              <label for="rg">RG *</label>
+              <input type="text" id="rg" name="rg" placeholder="Digite seu RG" required>
+            </div>
+
+            <!-- Formation Type Field -->
+            <div class="form-group">
+              <label for="formationType">Tipo de Inscrição *</label>
+              <select id="formationType" name="formationType" required>
+                <option value="formacao">Formação de Vigilante</option>
+                <option value="reciclagem">Reciclagem</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="period">Período</label>
+              <select id="period" name="period" required>
+                <option value="diurno">Diurno</option>
+                <option value="noturno">Noturno</option>
+              </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="text-align: center; margin-top: 30px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Enviar e Ir para WhatsApp</button>
+            </div>
+
+            <!-- Info Message -->
+            <div class="form-info">
+              <p>Após enviar o formulário, você será redirecionado para o WhatsApp para confirmar sua inscrição.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO CARDS SECTION -->
+    <section class="courses">
+      <div class="container">
+        <h2>Informações sobre os Cursos</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <h3>Formação de Vigilante</h3>
+            <p>Curso completo de 200 horas para quem deseja ingressar na profissão de vigilante patrimonial.</p>
+            <p><strong>Requisitos:</strong> Idade mínima 21 anos, ensino fundamental completo.</p>
+          </div>
+          <div class="course-card">
+            <h3>Reciclagem</h3>
+            <p>Curso obrigatório a cada dois anos para renovação da certificação de vigilante.</p>
+            <p><strong>Para:</strong> Vigilantes já certificados que precisam renovar sua documentação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+      <div class="container">
+        <h2>Dúvidas sobre o Cadastro?</h2>
+        <p>Entre em contato conosco pelo WhatsApp</p>
+        <a href="contact.html" class="btn btn-dark">Fale Conosco</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <img src="../images/logo.png" alt="EFASEG Logo">
+        <h3>EFASEG</h3>
+        <p>Centro de Formação de Profissionais de Segurança</p>
+      </div>
+      <div class="footer-section2">
+        <h3><ion-icon name="logo-whatsapp"></ion-icon></h3>
+        <p><strong>Belo Horizonte - MG</strong><br>(31) 99280-1003</p>
+        <p><strong>Ponte Nova - MG</strong><br>(31) 3817-2889</p>
+        <p><strong>Uberlândia - MG</strong><br>(34) 99773-8773</p>
+      </div>
+
+     <div class="footer-section">
+  <h3><ion-icon name="logo-instagram"></ion-icon></h3>
+
+  <a href="https://www.instagram.com/escolaefasegbh?igsh=bWloczkwdHZ4NDEy"
+     target="_blank"
+     rel="noopener noreferrer">
+    EFASEG – Belo Horizonte
+  </a>
+
+  <a href="https://www.instagram.com/escola_de_vigilantes_efaseg_pn?igsh=NG9vZ3hzNTh2M3ht"
+     target="_blank"
+     rel="noopener noreferrer">
+    EFASEG – Ponte Nova
+  </a>
+
+  <a href="https://www.instagram.com/efaseguberlandia?igsh=MWtyejg0YmxmMTRhdw=="
+     target="_blank"
+     rel="noopener noreferrer">
+    EFASEG – Uberlândia
+  </a>
+</div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 EFASEG. Todos os direitos reservados.</p>
+      <p>&copy; Desenvolvido por Bosko Dev</p>
+
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

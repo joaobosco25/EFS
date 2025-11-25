@@ -1,0 +1,90 @@
+.hero {
+  background-image: url("./images/logo\ 3d.png"); /* caminho da sua foto */
+  background-size: cover;        /* preenche toda a área */
+  background-position: center;   /* centraliza a imagem */
+  background-repeat: no-repeat;  /* não repetir */
+  padding: 80px 0;               /* altura da faixa */
+  color: #fff;                   /* texto claro em cima da foto */
+}
+
+/* ============================================
+   ABOUT PAGE - CARDS RESPONSIVOS
+   ============================================ */
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ============================================
+   UNIDADES SECTION
+   ============================================ */
+
+.units {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.units h2 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.unit-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.unit-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+.unit-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.unit-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* Responsivo para as unidades */
+@media (max-width: 992px) {
+  .units-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .units-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
