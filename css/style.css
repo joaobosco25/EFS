@@ -13,6 +13,7 @@
 }
 
 html, body {
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   color: #333;
   background-color: #ffffff;
@@ -23,6 +24,7 @@ html, body {
    ============================================ */
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -53,6 +55,7 @@ header {
 }
 
 header .container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +123,7 @@ footer {
 }
 
 footer .container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -244,12 +248,14 @@ footer .footer-section h3 ion-icon {
 }
 
 .hero .container {
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
 
 .hero .container {
+  width: 100%;
   display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 90px;
@@ -352,6 +358,7 @@ footer .footer-section h3 ion-icon {
 }
 
 .stats .container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
@@ -750,6 +757,7 @@ footer .footer-section h3 ion-icon {
   }
 
   .hero .container {
+  width: 100%;
     grid-template-columns: 1fr;
   }
 
@@ -787,12 +795,14 @@ footer .footer-section h3 ion-icon {
   }
 
   footer .container {
+  width: 100%;
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
   header .container {
+  width: 100%;
     flex-direction: column;
     gap: 15px;
   }
@@ -837,59 +847,9 @@ footer .footer-section h3 ion-icon {
 }
 /* === MENU HAMBÚRGUER (SOMENTE MOBILE) === */
 @media (max-width: 768px) {
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;    
-  }
-  .hamburger {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  header nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    padding: 1rem 0;
-  }
-
-  header nav.active {
-    display: flex;
-  }
-
-  header nav a {
-    color: #fff;
-    padding: 0.8rem;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Ícone do menu */
-  .hamburger {
-    width: 30px;
-    height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-
-  /* === MENU HAMBÚRGUER (APENAS MOBILE) === */
-@media (max-width: 768px) {
-
   /* Ajustes do header */
   header .container {
+  width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -934,9 +894,6 @@ footer .footer-section h3 ion-icon {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-
-    border: 2px solid red;
-    
   }
 
   .hamburger span {
@@ -966,4 +923,162 @@ footer .footer-section h3 ion-icon {
   }
 }
 
+/* ============================================
+   ABOUT PAGE - CARDS E SEÇÕES
+   ============================================ */
+
+.content-section {
+  padding: 60px 0;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.content-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 15px;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.content-section ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.content-section li {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.about-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+.about-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.about-card ul {
+  margin-left: 20px;
+}
+
+.about-card li {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================================
+   UNIDADES SECTION
+   ============================================ */
+
+.units {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.units h2 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.unit-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.unit-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+.unit-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.unit-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* RESPONSIVO PARA ABOUT PAGE */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .units-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .units-grid {
+    grid-template-columns: 1fr;
+  }
 }
