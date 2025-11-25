@@ -28,7 +28,9 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  text-align: center;
 }
+
 
 body {
   display: flex;
@@ -396,10 +398,53 @@ footer .footer-section h3 ion-icon {
 
 .courses-grid {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.courses-grid-mudancas-recentes {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-bottom: 40px;
 }
+
+.courses-grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.courses-grid-direitos-do-vigilante {
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.courses-grid-mercadodetrabalho {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.courses-grid-curiosidades {
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.courses-gridsalario {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
 
 .course-card {
   background: #ffffff;
@@ -422,6 +467,33 @@ footer .footer-section h3 ion-icon {
 }
 
 .course-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.course-cardsalario {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.course-cardsalario:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+.course-cardsalario h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.course-cardsalario p {
   font-size: 14px;
   color: #666;
   margin-bottom: 15px;
@@ -466,13 +538,11 @@ footer .footer-section h3 ion-icon {
 
 .courses-grid1 .course-card {
   display: grid;
-  border: 3px solid red;
   margin-bottom: 40px;
 }
 
  .course-card2 {
   display: grid;
-  border: 3px solid red;
   margin-bottom: 40px;
   border: 2px solid #e0e0e0;
   background-color: #f5f5f5;
@@ -545,6 +615,20 @@ footer .footer-section h3 ion-icon {
 .why-choose-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.why-choose-grid-portaria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.why-choose-grid-portaria16 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   text-align: center;
 }
@@ -777,12 +861,41 @@ footer .footer-section h3 ion-icon {
   .courses-grid {
     grid-template-columns: 1fr;
   }
+  
+  .courses-grid-mudancas-recentes {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid-cursos {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid-direitos-do-vigilante {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid-curiosidades {
+    grid-template-columns: 1fr;
+  }
+  
+
+  .courses-grid-mercadodetrabalho {
+    grid-template-columns: 1fr;
+  }
 
   .reciclagens-grid {
     grid-template-columns: 1fr;
   }
 
   .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-grid-portaria {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-grid-portaria16 {
     grid-template-columns: 1fr;
   }
 
