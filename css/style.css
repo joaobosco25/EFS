@@ -264,6 +264,8 @@ footer .footer-section h3 ion-icon {
   align-items: center;
 }
 
+
+
 .hero h1 {
   font-size: 48px;
   font-weight: 800;
@@ -1147,7 +1149,7 @@ display: grid;
 
 .units-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 25px;
 }
 

@@ -741,9 +741,11 @@ footer .footer-section h3 ion-icon {
 
 .units-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 25px;
+  border: 3px solid red;
 }
+
 
 .unit-card {
   background: #ffffff;
