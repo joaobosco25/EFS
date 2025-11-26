@@ -405,6 +405,13 @@ footer .footer-section h3 ion-icon {
   margin-bottom: 40px;
 }
 
+.courses-grid-index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
 .courses-grid-mudancas-recentes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -861,6 +868,10 @@ display: grid;
   }
 
   .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid-index {
     grid-template-columns: 1fr;
   }
   
