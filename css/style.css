@@ -223,29 +223,25 @@ footer .footer-section h3 ion-icon {
    ============================================ */
 
 .hero {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  color: #ffffff;
-  padding: 60px 0;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
+  /* Substituição do carrossel por imagem de fundo: logo 3d.png */
+  background-image: url('../images/logo 3d.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; /* garante altura de destaque */
-  color: white;
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da viewport */
+  color: #ffffff;
   display: flex;
   align-items: center;
-  transition: background 1s ease-in-out;
+  position: relative;
+  padding: 60px 0;
 }
 
 .hero::before {
+  /* Overlay escuro para melhorar a legibilidade do texto */
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.7); /* Aumentei a opacidade para garantir legibilidade */
   z-index: 0;
 }
 
@@ -253,26 +249,25 @@ footer .footer-section h3 ion-icon {
   width: 100%;
   position: relative;
   z-index: 1;
-}
-
-
-.hero .container {
-  width: 100%;
+  /* Centraliza o conteúdo dentro do container */
   display: flex;
-  grid-template-columns: 1fr 1fr;
-  gap: 90px;
+  justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
-
+.hero-content {
+  /* Estilos para o conteúdo do hero (h1, p, buttons) */
+  max-width: 800px; /* Limita a largura do texto para melhor leitura */
+  text-align: center;
+}
 
 .hero h1 {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-    text-align: center;
-
+  text-align: center;
 }
 
 .hero .subtitle {
@@ -295,14 +290,11 @@ footer .footer-section h3 ion-icon {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 30px; /* Ajustei a margem superior */
   justify-content: center;
 }
 
-.hero img {
-  max-width: 100%;
-  height: auto;
-}
+/* Remoção de estilos de carrossel e imagem que não são mais necessários */
 
 /* ============================================
    BUTTONS
@@ -851,7 +843,6 @@ display: grid;
 
   .hero .container {
   width: 100%;
-    grid-template-columns: 1fr;
   }
 
   .hero h1 {
