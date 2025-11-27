@@ -1099,6 +1099,7 @@ display: grid;
   transition: all 0.3s ease;
 }
 
+
 .about-card:hover {
   border-color: #D4AF37;
   box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
