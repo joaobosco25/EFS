@@ -236,6 +236,7 @@ footer .footer-section h3 ion-icon {
   padding: 60px 0;
 }
 
+
 .hero::before {
   /* Overlay escuro para melhorar a legibilidade do texto */
   content: "";
@@ -844,6 +845,7 @@ display: grid;
   .hero .container {
   width: 100%;
   }
+  
 
   .hero h1 {
     font-size: 32px;
