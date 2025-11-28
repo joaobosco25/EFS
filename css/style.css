@@ -116,7 +116,6 @@ header {
 }
 
 header .container {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1064,6 +1063,7 @@ display: grid;
   width: 100%;
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -1071,6 +1071,7 @@ display: grid;
 
   /* Esconde o menu padrão */
   header nav {
+    order: 3;
     display: none;
     position: absolute;
     top: 100%;
@@ -1100,12 +1101,31 @@ display: grid;
 
   /* Botão hambúrguer */
   .hamburger {
+    order: 1;
     width: 28px;
     height: 20px;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    
+  }
+
+  .hamburger span {
+    margin: 4px;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .logo span {
+    font-size: 18px;
   }
 
   .hamburger span {
@@ -1134,6 +1154,10 @@ display: grid;
     to { opacity: 1; transform: translateY(0); }
   }
 }
+
+
+
+
 
 /* ============================================
    ABOUT PAGE - CARDS E SEÇÕES
