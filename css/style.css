@@ -1101,7 +1101,7 @@ display: grid;
 
   /* Botão hambúrguer */
   .hamburger {
-    order: 1;
+    order: 2;
     width: 28px;
     height: 20px;
     display: block;
@@ -1116,7 +1116,7 @@ display: grid;
   }
 
   .logo {
-    order: 2;
+    order: 1;
   }
 
   .logo img {
