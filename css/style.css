@@ -449,11 +449,34 @@ footer .footer-section h3 ion-icon {
   color: #000000;
 }
 
+.courses-unidades {
+  padding: 60px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses-unidades h2 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000000;
+}
+
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin-bottom: 40px;
+}
+
+.courses-grid-unidades {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+ 
 }
 
 .courses-grid-index {
@@ -485,6 +508,13 @@ display: grid;
 }
 
 .courses-grid-mercadodetrabalho {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.courses-grid-contato {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
@@ -953,6 +983,14 @@ display: grid;
 }
 
   .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid-unidades {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid-contato {
     grid-template-columns: 1fr;
   }
 
