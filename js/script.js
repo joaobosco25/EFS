@@ -58,13 +58,30 @@ function initializeForm() {
     
     // Obter valores do formulário
     const name = document.getElementById('name').value.trim();
+    const formationType = document.getElementById('formationType').value;
+    const city = document.getElementById('city').value;
+    const period = document.getElementById('period').value;
     const cpf = document.getElementById('cpf').value.trim();
     const rg = document.getElementById('rg').value.trim();
-    const formationType = document.getElementById('formationType').value;
 
     // Validações
     if (!name) {
       showMessage('Por favor, preencha o nome completo.', 'error');
+      return;
+    }
+
+    if (!formationType) {
+      showMessage('Por favor, selecione o Tipo de Inscrição.', 'error');
+      return;
+    }
+
+    if (!city) {
+      showMessage('Por favor, selecione a Cidade.', 'error');
+      return;
+    }
+
+    if (!period) {
+      showMessage('Por favor, selecione o Período.', 'error');
       return;
     }
 
@@ -74,7 +91,7 @@ function initializeForm() {
     }
 
     if (!validarCPF(cpf)) {
-      showMessage('CPF inválido.', 'error');
+      showMessage('CPF inválido. Por favor, verifique o número.', 'error');
       return;
     }
 
@@ -83,8 +100,18 @@ function initializeForm() {
       return;
     }
 
+    // Mapeamento de valores para o WhatsApp
+    const formationText = formationType === 'formacao' ? 'Formação de Vigilante' : 'Reciclagem';
+    const cityText = document.getElementById('city').options[document.getElementById('city').selectedIndex].text;
+    const periodText = document.getElementById('period').options[document.getElementById('period').selectedIndex].text;
+
     // Se passou em todas as validações, redirecionar para WhatsApp
-    const whatsappMessage = `Olá! Meu nome é ${name}, CPF: ${cpf}, RG: ${rg}. Gostaria de me inscrever em ${formationType === 'formacao' ? 'Formação' : 'Reciclagem'} de Vigilante.`;
+    const whatsappMessage = `Olá! Meu nome é ${name}.
+Gostaria de me inscrever para ${formationText} na unidade de ${cityText}, no período ${periodText}.
+Meus documentos: CPF: ${cpf}, RG: ${rg}.
+Aguardando o contato para confirmar a inscrição.`;
+    
+    // O número de WhatsApp é o de Uberlândia, conforme o footer.
     const whatsappUrl = `https://wa.me/5534997738773?text=${encodeURIComponent(whatsappMessage)}`;
     
     showMessage('Cadastro realizado com sucesso! Redirecionando para WhatsApp...', 'success');

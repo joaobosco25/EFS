@@ -20,7 +20,6 @@
         <a href="about.html">Sobre</a>
         <a href="courses.html">Cursos</a>
         <a href="profession.html">Profissão</a>
-        <a href="portaria16.html">Portaria 16</a>
         <a href="register.html" class="active">Cadastro</a>
         <a href="contact.html">Contato</a>
       </nav>
@@ -33,9 +32,13 @@
     <section class="hero">
       <div class="container">
         <div>
-          <h1>Cadastro de Vigilantes</h1>
-          <p class="subtitle">Inscreva-se para Formação ou Reciclagem</p>
-          <p>Preencha o formulário abaixo e dê o primeiro passo para sua carreira na segurança privada. Após o envio, você será redirecionado para o WhatsApp para confirmar sua inscrição.</p>
+          <h1>Registre-se</h1>
+          <p class="subtitle">Faça seu Cadastro!</p>
+          <p>Preencha o formulário abaixo para iniciar sua 
+            Formação ou Reciclagem. Nossa equipe fará a checagem 
+            da sua habilitação (certidões da Polícia Federal) e 
+            dará retorno pelo WhatsApp para confirmar sua
+             inscrição.</p>
         </div>
       </div>
     </section>
@@ -51,6 +54,36 @@
               <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
             </div>
 
+            <!-- Formation Type Field -->
+            <div class="form-group">
+              <label for="formationType">Tipo de Inscrição *</label>
+              <select id="formationType" name="formationType" required>
+                <option value="formacao">Formação de Vigilante</option>
+                <option value="reciclagem">Reciclagem</option>
+              </select>
+            </div>
+
+            <!-- City Field -->
+            <div class="form-group">
+              <label for="city">Cidade *</label>
+              <select id="city" name="city" required>
+                <option value="" disabled selected>Selecione a Cidade</option>
+                <option value="belo_horizonte">Belo Horizonte</option>
+                <option value="ponte_nova">Ponte Nova</option>
+                <option value="uberlandia">Uberlândia</option>
+              </select>
+            </div>
+
+            <!-- Period Field -->
+            <div class="form-group">
+              <label for="period">Período *</label>
+              <select id="period" name="period" required>
+                <option value="" disabled selected>Selecione o Período</option>
+                <option value="integral">Integral</option>
+                <option value="noturno">Noturno</option>
+              </select>
+            </div>
+
             <!-- CPF Field -->
             <div class="form-group">
               <label for="cpf">CPF *</label>
@@ -61,23 +94,6 @@
             <div class="form-group">
               <label for="rg">RG *</label>
               <input type="text" id="rg" name="rg" placeholder="Digite seu RG" required>
-            </div>
-
-            <!-- Formation Type Field -->
-            <div class="form-group">
-              <label for="formationType">Tipo de Inscrição *</label>
-              <select id="formationType" name="formationType" required>
-                <option value="formacao">Formação de Vigilante</option>
-                <option value="reciclagem">Reciclagem</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="period">Período</label>
-              <select id="period" name="period" required>
-                <option value="diurno">Diurno</option>
-                <option value="noturno">Noturno</option>
-              </select>
             </div>
 
             <!-- Submit Button -->
@@ -94,24 +110,6 @@
       </div>
     </section>
 
-    <!-- INFO CARDS SECTION -->
-    <section class="courses">
-      <div class="container">
-        <h2>Informações sobre os Cursos</h2>
-        <div class="courses-grid">
-          <div class="course-card">
-            <h3>Formação de Vigilante</h3>
-            <p>Curso completo de 200 horas para quem deseja ingressar na profissão de vigilante patrimonial.</p>
-            <p><strong>Requisitos:</strong> Idade mínima 21 anos, ensino fundamental completo.</p>
-          </div>
-          <div class="course-card">
-            <h3>Reciclagem</h3>
-            <p>Curso obrigatório a cada dois anos para renovação da certificação de vigilante.</p>
-            <p><strong>Para:</strong> Vigilantes já certificados que precisam renovar sua documentação.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- CTA SECTION -->
     <section class="cta">
