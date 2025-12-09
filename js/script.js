@@ -53,6 +53,12 @@ function initializeForm() {
   const form = document.getElementById('registerForm');
   if (!form) return;
 
+  const WHATSAPP_NUMBERS = {
+    'uberlandia': '5534997738773',
+    'ponte_nova': '5531997017048',
+    'belo_horizonte': '5531992801003'
+  };
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -85,18 +91,10 @@ function initializeForm() {
       return;
     }
 
-    if (!cpf) {
-      showMessage('Por favor, preencha o CPF.', 'error');
-      return;
-    }
-
-    if (!validarCPF(cpf)) {
+    // Validação de CPF e RG removida conforme solicitação do usuário.
+    // Apenas a validação de formato do CPF será mantida, se o campo for preenchido.
+    if (cpf && !validarCPF(cpf)) {
       showMessage('CPF inválido. Por favor, verifique o número.', 'error');
-      return;
-    }
-
-    if (!rg) {
-      showMessage('Por favor, preencha o RG.', 'error');
       return;
     }
 
@@ -111,8 +109,9 @@ Gostaria de me inscrever para ${formationText} na unidade de ${cityText}, no per
 Meus documentos: CPF: ${cpf}, RG: ${rg}.
 Aguardando o contato para confirmar a inscrição.`;
     
-    // O número de WhatsApp é o de Uberlândia, conforme o footer.
-    const whatsappUrl = `https://wa.me/5534997738773?text=${encodeURIComponent(whatsappMessage)}`;
+    // Selecionar o número de WhatsApp correto com base na cidade.
+    const whatsappNumber = WHATSAPP_NUMBERS[city] || WHATSAPP_NUMBERS['uberlandia']; // Fallback para Uberlândia
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     
     showMessage('Cadastro realizado com sucesso! Redirecionando para WhatsApp...', 'success');
     
